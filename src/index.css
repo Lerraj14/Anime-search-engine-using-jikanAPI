@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    h1{
+        @apply mb-4 text-4xl  text-tomato font-medium md:text-5xl;
+    }
+    h2{
+        @apply mb-2 text-2xl font-medium text-tomato;
+    }
+    h4{
+        @apply mb-2 text-xl font-medium text-darkBisque ;
+    }
+}
