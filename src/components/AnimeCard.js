@@ -5,10 +5,8 @@ function AnimeCard({ anime }) {
 // console.log(anime);
 const loadgenres=(anime)=>{
   let genreArr=[]
-  anime.genres.map((title)=>{
-    genreArr.push(title.name);
-  })
-  return genreArr.toString() ;
+  anime.genres.map((title)=>(genreArr.push(title.name)));
+  return genreArr.toString();
 }
 // console.log(genres(anime));
   // Anime Cards
