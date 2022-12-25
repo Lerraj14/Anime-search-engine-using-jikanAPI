@@ -51,11 +51,11 @@ function Home(props) {
           and on searching it will show search results
           use map() function to get all element in the array
       */}
-      <div className="flex justify-center flex-col items-center m-4">
+      <div className="flex justify-center flex-col items-center p-4 overflow-hidden">
         <Category handleCategory={props.handleCategory} />
         {!props.search && props.animeList.length === 0 ? (
           <>
-            <div className=" grid md:grid-cols-3 md:gap-8 m-4 p-4 md:place-items-center ">
+            <div className=" grid md:grid-cols-3 md:gap-8 m-4 p-4 place-items-center overflow-hidden ">
               {props.topAnime.map((anime) => (
                 <AnimeCard anime={anime} key={anime.mal_id} />
               ))}
@@ -66,7 +66,7 @@ function Home(props) {
 
            {/* display Anime result <h2> after clicking search button */}
             {searchResultMarkup(props.toggleSearch,props.animeList)}
-            <div className="grid md:grid-cols-3 md:gap-8 m-4 p-4  md:place-items-center">
+            <div className="grid md:grid-cols-3 md:gap-8 m-4 p-4 place-items-center">
               {props.animeList.map((anime) => (
                 <AnimeCard anime={anime} key={anime.mal_id} />
               ))}

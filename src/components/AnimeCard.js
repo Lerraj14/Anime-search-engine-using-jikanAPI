@@ -13,20 +13,20 @@ const loadgenres=(anime)=>{
   return (
     <>
     <div>
-      <div className=" p-4">
+      <div className=" p-4 flex flex-col">
         <img
           src={anime.images.jpg.image_url}
           alt="AnimeImage"
-          className="inline-block"
+          className="inline-block "
         />
         <div>
-        <h3 className="text-tomato font-light text-lg">{anime.title}</h3>
+        <h3 className="text-tomato font-light text-lg mt-2">{anime.title}</h3>
         <h4>Score: {anime.score}</h4>
         <h4>Aired: {anime.aired.string}</h4>
         <h4>Episodes: {anime.episodes}</h4>
         <h4>Genres: {loadgenres(anime)}</h4>
         <a href={anime.url} alt={anime.title}><h4 className="hover:text-tomato transition-all ease-in duration-100">Visit source</h4></a>
-        <p className="text-justify font-thin text-base lowercase">{anime.synopsis}</p>
+        <p className="text-justify font-thin text-base lowercase p-2">{anime.synopsis}</p>
         </div>
       </div>
  
